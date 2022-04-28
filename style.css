@@ -38,6 +38,26 @@ body {
 footer {
     background-color: azure;
 }
+
 img {
-   width: 30vw;
+    width: 10vw;
+}
+
+.sidebar {
+    background-image: url(./Images/montylov-HyBXy5PHQR8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 40vw;
+}
+
+.sidebar__logo {
+    font-size: 60pt;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.322);
+    width: 40vw;
+    padding: 0.7rem;
+    position: relative;
+    top: 15rem;
 }
