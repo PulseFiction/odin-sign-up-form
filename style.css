@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
-
+:root {
+    --clr-primary-white: #ffffff;
+    --clr-primary-grey: #e6e6e6;
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -12,31 +15,90 @@
 
 body {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     font-family: 'Comfortaa', cursive;
+    
     
 
 }
 
 .container {
-    background-color: aliceblue;
+    background-color: var(--clr-primary-grey);
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    justify-content: space-between;
+    border: 1px solid red;
+    height: 100%;
+    
 }
 
 .container__main {
-    background-color: antiquewhite;
+    background-color: var(--clr-primary-white);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
 }
 
 
+
+form {
+    
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin: 0.5rem 0px 0.5rem 0px;
+}
+
+input {
+    padding: 0.2rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+
 .container__submit{
-    background-color: aquamarine;
+    background-color: var(--clr-primary-white);
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-family: 'Comfortaa', cursive;
+    background-color: #b80000;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    border: none;
+    font-size: 20pt;
+    margin-bottom: 2rem;
+    color: var(--clr-primary-white);
+    
 }
 
 
 footer {
-    background-color: azure;
+    background-color: var(--clr-primary-white);
+    text-align: center;
+
+    
 }
 
 img {
@@ -46,18 +108,20 @@ img {
 .sidebar {
     background-image: url(./Images/montylov-HyBXy5PHQR8-unsplash.jpg);
     background-repeat: no-repeat;
-    background-size: 40vw;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar__logo {
-    font-size: 60pt;
+    font-size: 30pt;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.322);
-    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.247);
+    width: 100vw;
     padding: 0.7rem;
-    position: relative;
-    top: 15rem;
+    
 }

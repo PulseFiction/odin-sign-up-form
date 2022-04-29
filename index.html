@@ -15,13 +15,32 @@
     </div>
     <div class="container">
         <div class="container__main">
-            <h1>This is a template car website</h1>
+            <h1>This is a template sign up form website</h1>
         </div>
         <form action="#">
-            <h2>Here's where the form will be</h2>
+            <h2>Enter your details here:</h2>
+            <div class="form__name">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" placeholder="Enter your first name" required >
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" placeholder="Enter your last name" required>
+            </div>
+            <div class="form__email__phone">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter Telephone number" required>
+            </div>
+            <div class="form__password">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
         </form>
         <div class="container__submit">
-            <button >Submit</button>
+            <button>Submit</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
         </div>
         <footer>
             Made by <a target="_blank" href="https://github.com/PulseFiction">Pulse Fiction</a>
