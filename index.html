@@ -20,31 +20,32 @@
         <form action="#">
             <h2>Enter your details here:</h2>
             <div class="form__name">
-                <label for="first_name">First Name:</label>
-                <input type="text" name="first_name" id="first_name" placeholder="Enter your first name" required >
-                <label for="last_name">Last Name:</label>
-                <input type="text" name="last_name" id="last_name" placeholder="Enter your last name" required>
+                <label for="first_name">*First Name:</label>
+                <input type="text" name="first_name" id="first_name" pattern="^[A-Z]+[a-zA-Z]*$" placeholder="Enter your first name" required >
+                <label for="last_name">*Last Name:</label>
+                <input type="text" name="last_name" id="last_name" pattern="^[A-Z]+[a-zA-Z]*$" placeholder="Enter your last name" required>
             </div>
             <div class="form__email__phone">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone" placeholder="Enter Telephone number" required>
+                <label for="email">*Email:</label>
+                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" required>
+                <label for="phone">*Phone Number:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter area code (e.g +44) " pattern="^\+(?:[0-9]●?){6,14}[0-9]$" title="Please enter your area code" required>
             </div>
             <div class="form__password">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" name="confirm_password" id="confirm_password" required>
+                <label for="password">*Password:</label>
+                <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <label for="confirm_password">*Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
             </div>
         </form>
         <div class="container__submit">
             <button>Submit</button>
             <p>Already have an account? <a href="#">Log in</a></p>
+            <footer>
+                Made by <a target="_blank" href="https://github.com/PulseFiction">Pulse Fiction</a>
+            </footer>
         </div>
-        <footer>
-            Made by <a target="_blank" href="https://github.com/PulseFiction">Pulse Fiction</a>
-        </footer>
+        
 
     </div>
     

@@ -3,6 +3,8 @@
 :root {
     --clr-primary-white: #ffffff;
     --clr-primary-grey: #e6e6e6;
+    --clr-primary-red: #b80000;
+    --clr-secondary-red: #f70000;
 }
 
 *, *::before, *::after {
@@ -16,7 +18,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    max-height: 100vh;
     font-family: 'Comfortaa', cursive;
     
     
@@ -24,34 +26,37 @@ body {
 }
 
 .container {
-    background-color: var(--clr-primary-grey);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
     height: 100%;
+    gap: 1rem
     
 }
 
 .container__main {
     background-color: var(--clr-primary-white);
-    height: 10vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 10pt;
     
 }
 
 
 
 form {
-    
-    height: 50vh;
+    background-color: var(--clr-primary-grey);
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    box-shadow: 0px 5px 5px rgb(122, 122, 122);
+    
+    
 }
 
 form > div {
@@ -70,7 +75,13 @@ input {
     font-family: 'Comfortaa', cursive;
 }
 
+input:invalid {
+    border: 3px solid var(--clr-primary-red)
+}
 
+input:valid {
+    border: 1px solid green;
+}
 
 .container__submit{
     background-color: var(--clr-primary-white);
@@ -79,18 +90,25 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 button {
     font-family: 'Comfortaa', cursive;
-    background-color: #b80000;
+    background-color: var(--clr-primary-red);
     padding: 0.5rem 2rem;
     border-radius: 15px;
     border: none;
     font-size: 20pt;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     color: var(--clr-primary-white);
     
+}
+
+button:focus,
+button:active {
+    background-color: var(--clr-secondary-red);
+    cursor: pointer;
 }
 
 
@@ -124,4 +142,79 @@ img {
     width: 100vw;
     padding: 0.7rem;
     
+}
+
+@media only screen and (min-width: 700px) {
+    
+    body {
+        flex-direction: row;
+        
+    }
+
+    .container {
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    h1 {
+        font-size: 40pt;
+    }
+    
+   
+    .sidebar {
+        width: 40vw;
+        height: 100vh;
+    }
+
+    form {
+        width: 60vw;
+        
+
+       
+    }
+
+    form > h2 {
+        margin-bottom: 2rem;
+        font-size: 30pt;
+    }
+
+
+    .form__name,
+    .form__email__phone,
+    .form__password {
+        display: flex;
+        flex-direction: row;
+        gap: 0.7rem;
+        
+        
+       
+       
+    }
+
+    label {
+        display: inline-block;
+        width: 5rem;
+        text-align: right;
+        padding-right: 0.5rem;
+       
+    }
+
+    input {
+        padding: 0.5rem;
+        display: inline-block;
+    }
+
+
+    
+   
+
+    button:hover {
+        background-color: var(--clr-secondary-red);
+        cursor: pointer;
+    }
+
+    footer {
+        padding: 2rem;
+    }
 }
