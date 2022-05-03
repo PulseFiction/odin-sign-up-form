@@ -14,7 +14,3 @@ Things I used to create this:
 * Flex - Flex was used to layout the entire webpage
 * Mobile first design - Wasn't actually required for the project criteria, however I enjoy using this principle when designing webpages as it is easier to design the desktop version after.
 
-
-
-
-Live Link : https://pulsefiction.github.io/odin-sign-up-form/
